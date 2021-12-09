@@ -20,7 +20,7 @@ export class CoordinatorStrategy implements AuthenticationStrategy {
         }
         let info = this.serviceService.VerifyTokenJWT(token);
         if(info){
-            if(info.data.role == 'coo1' || info.data.role=='emp01'){
+            if(info.data.role == 'coo1' || info.data.role=='empl01'){ 
             let profile: UserProfile = Object.assign({
                 email: info.data.email,
                 role: info.data.role
